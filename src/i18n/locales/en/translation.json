@@ -1,0 +1,11 @@
+{
+  "test": "123",
+  "home": {
+    "title": "Address Book",
+    "language": "Language",
+    "search_placeholder" :"Search…"
+  },
+  "list": {
+    "name": "name:"
+  }
+}
