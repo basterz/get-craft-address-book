@@ -1,7 +1,7 @@
 {
   "test": "123",
   "home": {
-    "title": "Address Book",
+    "title": "Address Book id",
     "language": "Language",
     "search_placeholder" :"Search…"
   },

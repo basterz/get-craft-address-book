@@ -4,19 +4,19 @@ export const SELECT_API = 'SELECT_API';
 export const INVALIDATE_API = 'INVALIDATE_API';
 export const FILTER_USERS = 'FILTER_USERS';
 
-export function selectApi(url) {
-    return {
-        type: SELECT_API,
-        url
-    }
-}
-
-export function invalidateApi(url) {
-    return {
-        type: INVALIDATE_API,
-        url
-    }
-}
+    // export function selectApi(url) {
+    //     return {
+    //         type: SELECT_API,
+    //         url
+    //     }
+    // }
+    //
+    // export function invalidateApi(url) {
+    //     return {
+    //         type: INVALIDATE_API,
+    //         url
+    //     }
+    // }
 
 function requestAddresses(url) {
     return {
@@ -34,15 +34,14 @@ function receiveAddresses(url, json) {
     }
 }
 
-function filterUsers(word) {
-    return {
-        type: FILTER_USERS,
-        word: word
-    }
-}
+// function filterUsers(word) {
+//     return {
+//         type: FILTER_USERS,
+//         word: word
+//     }
+// }
 
 function fetchAddresses(url) {
-    console.log(url);
     return dispatch => {
         dispatch(requestAddresses(url))
         return fetch(url)

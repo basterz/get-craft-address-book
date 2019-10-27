@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import PropTypes from 'prop-types';
 import AppBar from "@material-ui/core/AppBar";
 import {Toolbar, Typography, withStyles} from "@material-ui/core";
 import {withTranslation} from "react-i18next";
@@ -9,7 +8,6 @@ import MenuItem from "@material-ui/core/MenuItem";
 import {fade} from "@material-ui/core/styles";
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from "@material-ui/core/InputBase";
-import connect from "react-redux/lib/connect/connect";
 
 const styles = theme => ({
     root: {
@@ -84,7 +82,6 @@ class NavBar extends Component {
     }
 
     render() {
-        console.log(this.store);
         const {t, classes} = this.props;
         return (
             <div className={classes.root}>
@@ -125,9 +122,5 @@ class NavBar extends Component {
         )
     }
 }
-
-NavBar.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
 
 export default withStyles(styles, {withTheme: true})(withTranslation()(NavBar));

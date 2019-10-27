@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import {FILTER_USERS, INVALIDATE_API, RECEIVE_ADDRESS_LIST, REQUEST_ADDRESS_LIST, SELECT_API} from "../actions/actions";
 
-function selectedApi(state = 'https://randomuser.me/api/?results=50', action) {
+function selectedApi(state = 'https://randomuser.me/api/?results=10', action) {
     switch (action.type) {
         case SELECT_API:
             return action.url
@@ -43,7 +43,6 @@ function addressList(
                     val.phone.includes(value)
             });
             return {...state, value, results};
-            return state;
         default:
             return state
     }

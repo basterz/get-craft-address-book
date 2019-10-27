@@ -1,25 +1,25 @@
 import React, {Component} from 'react';
 import './App.css';
 import {withTranslation} from 'react-i18next';
-import {i18n} from "i18next";
 import NavBar from "./components/NavBar";
-import AddressList from "./components/AddressList";
+
 import {connect} from "react-redux";
 import PropTypes from 'prop-types';
 import {fetchAddressesIfNeeded} from "./redux/actions/actions";
+import AddressList from "./components/AddressList/";
 
 
 class App extends Component {
     componentDidMount() {
-        const { dispatch, selectedApi, addresses } = this.props
-        console.log(this.props);
+        const { dispatch, selectedApi } = this.props
         dispatch(fetchAddressesIfNeeded(selectedApi))
     }
     render() {
         return (
             <div className="App">
                 <NavBar></NavBar>
-                <AddressList addresses={this.props.addresses}/>
+                <AddressList></AddressList>
+                {/*.*/}
             </div>
         );
     }
