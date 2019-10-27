@@ -4,15 +4,11 @@ import AppBar from "@material-ui/core/AppBar";
 import {Toolbar, Typography, withStyles} from "@material-ui/core";
 import {withTranslation} from "react-i18next";
 import FormControl from "@material-ui/core/FormControl";
-import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
-import makeStyles from "@material-ui/core/styles/makeStyles";
 import {fade} from "@material-ui/core/styles";
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from "@material-ui/core/InputBase";
-import IconButton from "@material-ui/core/IconButton";
 import connect from "react-redux/lib/connect/connect";
 
 const styles = theme => ({
@@ -134,4 +130,4 @@ NavBar.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default connect()(withStyles(styles, {withTheme: true})(withTranslation()(NavBar)));
+export default withStyles(styles, {withTheme: true})(withTranslation()(NavBar));

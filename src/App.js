@@ -7,7 +7,6 @@ import AddressList from "./components/AddressList";
 import {connect} from "react-redux";
 import PropTypes from 'prop-types';
 import {fetchAddressesIfNeeded} from "./redux/actions/actions";
-import mapDispatchToProps from "react-redux/lib/connect/mapDispatchToProps";
 
 
 class App extends Component {
@@ -55,8 +54,5 @@ function mapStateToProps(state) {
     }
 }
 
-function mapDispathToProps() {
-    //TODO view actions are here
-}
 
-export default connect(mapStateToProps,mapDispatchToProps)(withTranslation()(App))
+export default connect(mapStateToProps)(withTranslation()(App))
